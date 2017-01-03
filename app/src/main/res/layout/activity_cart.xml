@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context="com.example.jonathanspc.sctskapp.UI.CartActivity">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/lin4">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+
+            android:background="@color/colorSCTSK"
+            android:layout_alignParentTop="true"
+            android:id="@+id/linearLayout">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Varer"
+                android:paddingTop="3dp"
+                android:paddingLeft="25dp"
+                android:paddingBottom="2dp"
+                android:id="@+id/textView4" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:textColor="@color/white"
+                android:paddingRight="43dp"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Antal"
+                android:id="@+id/textView5" />
+        </LinearLayout>
+
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="474dp"
+            android:id="@+id/lstCart"
+            android:layout_below="@+id/linearLayout"
+            android:layout_alignParentLeft="true"
+            android:divider="@color/colorGrey"
+            android:dividerHeight="1sp"
+            android:layout_alignParentStart="true"
+            android:layout_above="@+id/linearLayout2" />
+
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorSCTSK"
+        android:weightSum="1"
+        android:id="@+id/relativeLayout">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="64dp"
+            android:text="Tøm kurv"
+            android:textSize="17dp"
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/white"
+            style="?android:attr/borderlessButtonStyle"
+            android:background="@color/colorSCTSK"
+            android:id="@+id/btnClear"
+
+            android:layout_weight="0.08" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="64dp"
+            android:text="Kassen"
+            android:background="@color/colorSCTSK"
+            android:textColor="@color/white"
+            android:textSize="18dp"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_marginRight="10dp"
+            android:layout_alignParentRight="true"
+            android:id="@+id/btnCheckout"
+            android:layout_weight="0.08" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:id="@+id/linearLayout2"
+        android:layout_alignParentLeft="false"
+        android:layout_alignParentStart="false"
+        android:layout_below="@+id/lin4"
+        android:layout_above="@+id/relativeLayout"
+        android:layout_marginBottom="5dp"
+        android:background="@color/colorSCTSK"
+        android:paddingRight="15dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="total"
+            android:id="@+id/txtCheckTotal"
+            android:layout_alignParentBottom="true"
+            android:layout_toLeftOf="@+id/textView7"
+            android:textColor="@color/colorAccent"
+            android:layout_toStartOf="@+id/textView7"
+            android:layout_marginRight="5px" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Total:"
+            android:id="@+id/textView6"
+            android:textColor="@color/abc_primary_text_material_dark"
+            android:layout_alignParentBottom="true"
+            android:layout_toLeftOf="@+id/txtCheckTotal"
+            android:layout_toStartOf="@+id/txtCheckTotal"
+            android:layout_marginRight="10px" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Kr."
+            android:id="@+id/textView7"
+            android:textColor="@color/colorAccent"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+    </RelativeLayout>
+
+</RelativeLayout>

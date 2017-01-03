@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/checkoutaction_products"
+        android:title="til Produkter"
+        app:showAsAction="always"
+        />
+
+    <item
+        android:id="@+id/checkoutaction_orders"
+        android:title="Mine ordre"
+        app:showAsAction="always"
+        />
+</menu>

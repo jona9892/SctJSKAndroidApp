@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:weightSum="1"
+        android:layout_gravity="center_horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:id="@+id/txtODQuantity"
+            android:linksClickable="true"
+            android:textAlignment="center"
+            android:layout_marginLeft="8dp"
+            android:textColor="@color/colorAccent"
+            android:hint="0"
+            android:layout_weight="0.05"
+            android:text="0"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="produkt"
+            android:textColor="@color/colorSCTSK"
+            android:id="@+id/txtODProductt"
+            android:layout_weight="0.44"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/txtODQuantity"
+            android:layout_toEndOf="@+id/txtODQuantity"
+            android:layout_marginLeft="10dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="pris"
+            android:textColor="@color/colorAccent"
+            android:id="@+id/txtODPrice"
+            android:layout_weight="0.05"
+            android:layout_marginRight="10dp"
+            android:layout_alignParentTop="true"
+            android:layout_toLeftOf="@+id/textView17"
+            android:layout_toStartOf="@+id/textView17" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Kr."
+            android:textColor="@color/colorAccent"
+            android:layout_marginRight="10dp"
+            android:id="@+id/textView17"
+            android:layout_weight="0.05"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+    </RelativeLayout>
+</LinearLayout>

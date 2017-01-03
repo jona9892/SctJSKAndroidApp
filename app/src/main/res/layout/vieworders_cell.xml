@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f2f2f2"
+    android:weightSum="1">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="75dp"
+        android:weightSum="1"
+        android:layout_weight="0.02">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="3.56">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+                <RelativeLayout
+                    android:layout_width="262dp"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="Ordre Nummer: "
+                        android:textColor="@color/colorSCTSK"
+                        android:textSize="20dp"
+                        android:id="@+id/ordernr"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginLeft="5dp"
+                        android:layout_above="@+id/textView9" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="1"
+                        android:textSize="20dp"
+                        android:id="@+id/txtOrderNr"
+                        android:layout_alignParentTop="true"
+                        android:layout_toRightOf="@+id/ordernr"
+                        android:layout_toEndOf="@+id/ordernr"
+                        android:textColor="@color/colorAccent" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="Ordre dato: "
+                        android:id="@+id/textView9"
+                        android:textColor="@color/colorSCTSK"
+                        android:layout_below="@+id/txtOrderNr"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginLeft="5dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="Oprettet dato: "
+                        android:textColor="@color/colorSCTSK"
+                        android:id="@+id/textView10"
+                        android:layout_below="@+id/textView9"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginLeft="5dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="19/12/2016"
+                        android:id="@+id/txtOrderDate"
+                        android:textSize="17dp"
+                        android:layout_above="@+id/textView10"
+                        android:layout_toRightOf="@+id/ordernr"
+                        android:layout_toEndOf="@+id/ordernr"
+                        android:textColor="@color/colorAccent" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="19/12/2016"
+                        android:textSize="17dp"
+                        android:id="@+id/txtOrderCreated"
+                        android:layout_alignTop="@+id/textView10"
+                        android:layout_toRightOf="@+id/ordernr"
+                        android:layout_toEndOf="@+id/ordernr"
+                        android:textColor="@color/colorAccent" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical">
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="Pris:"
+                        android:id="@+id/textView11"
+                        android:textColor="@color/colorSCTSK"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="Pris"
+                        android:id="@+id/txtOrderPrice"
+                        android:textColor="@color/colorAccent"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="10px"
+                        android:layout_toRightOf="@+id/textView11"
+                        android:layout_toEndOf="@+id/textView11" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="kr."
+                        android:textColor="@color/colorAccent"
+                        android:layout_marginLeft="10px"
+                        android:id="@+id/textView13"
+                        android:layout_alignParentTop="true"
+                        android:layout_toRightOf="@+id/txtCartProductPrice"
+                        android:layout_toEndOf="@+id/txtCartProductPrice" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorSCTSK"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="Pause: "
+                        android:id="@+id/txtBreak" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorAccent"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="09:50"
+                        android:id="@+id/txtTimeofDay" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
