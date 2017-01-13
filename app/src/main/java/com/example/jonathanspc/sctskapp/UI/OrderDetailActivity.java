@@ -1,15 +1,11 @@
 package com.example.jonathanspc.sctskapp.UI;
 
 import android.annotation.SuppressLint;
-import android.app.Activity;
 import android.content.Context;
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.LayoutInflater;
-import android.view.Menu;
-import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
@@ -21,15 +17,11 @@ import com.example.jonathanspc.sctskapp.BE.BEOrder;
 import com.example.jonathanspc.sctskapp.BE.BEOrderDetail;
 import com.example.jonathanspc.sctskapp.BE.BEProduct;
 import com.example.jonathanspc.sctskapp.BE.BEUser;
-import com.example.jonathanspc.sctskapp.BE.Cart;
-import com.example.jonathanspc.sctskapp.DAL.DALC.Abstraction.ICrud;
-import com.example.jonathanspc.sctskapp.DAL.DALC.Abstraction.IDALC;
-import com.example.jonathanspc.sctskapp.DAL.DALC.Abstraction.IDALCOrderDetail;
-import com.example.jonathanspc.sctskapp.DAL.DALC.Implementation.DALCOrderDetail;
-import com.example.jonathanspc.sctskapp.DAL.DALC.Implementation.DALCProduct;
+import com.example.jonathanspc.sctskapp.DAL.ServiceGateway.Abstraction.IGateway;
+import com.example.jonathanspc.sctskapp.DAL.ServiceGateway.Abstraction.IGatewayOrderDetail;
+import com.example.jonathanspc.sctskapp.DAL.ServiceGateway.Implementation.GatewayOrderDetail;
+import com.example.jonathanspc.sctskapp.DAL.ServiceGateway.Implementation.GatewayProduct;
 import com.example.jonathanspc.sctskapp.R;
-
-import org.w3c.dom.Text;
 
 import java.util.ArrayList;
 
@@ -44,7 +36,7 @@ public class OrderDetailActivity extends AppCompatActivity {
     private TextView txtODTotalPrice;
     private TextView txtPause;
 
-    IDALCOrderDetail<BEOrderDetail> dOD;
+    IGatewayOrderDetail<BEOrderDetail> dOD;
     private OrderDetailAdapter orderdetailAdapter;
     private ArrayList<BEOrderDetail> orderdetailListArray;
 
@@ -53,7 +45,7 @@ public class OrderDetailActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_order_detail);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        dOD = DALCOrderDetail.getInstance();
+        dOD = GatewayOrderDetail.getInstance();
         getFromIntent();
         setTitle("Ordre: " + m_order.getId());
 
@@ -102,12 +94,12 @@ public class OrderDetailActivity extends AppCompatActivity {
     {
         private int layout;
         Context context;
-        IDALC<BEProduct> dp;
+        IGateway<BEProduct> dp;
         public OrderDetailAdapter(Context context, int resource, ArrayList<BEOrderDetail> orderdetailsArray) {
             super(context, R.layout.orderdetail_cell, orderdetailsArray);
             this.context = context;
             this.layout = resource;
-            dp = DALCProduct.getInstance();
+            dp = GatewayProduct.getInstance();
         }
 
         @SuppressLint({"SetTextI18n", "InflateParams"})

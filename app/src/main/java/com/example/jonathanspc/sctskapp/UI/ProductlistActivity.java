@@ -26,10 +26,10 @@ import com.example.jonathanspc.sctskapp.BE.BEProduct;
 import com.example.jonathanspc.sctskapp.BE.BEUser;
 import com.example.jonathanspc.sctskapp.BE.Cart;
 import com.example.jonathanspc.sctskapp.DAL.DALC.Abstraction.ICrud;
-import com.example.jonathanspc.sctskapp.DAL.DALC.Abstraction.IDALC;
+import com.example.jonathanspc.sctskapp.DAL.ServiceGateway.Abstraction.IGateway;
 import com.example.jonathanspc.sctskapp.DAL.DALC.Implementation.DALCCart;
-import com.example.jonathanspc.sctskapp.DAL.DALC.Implementation.DALCCategory;
-import com.example.jonathanspc.sctskapp.DAL.DALC.Implementation.DALCProduct;
+import com.example.jonathanspc.sctskapp.DAL.ServiceGateway.Implementation.GatewayCategory;
+import com.example.jonathanspc.sctskapp.DAL.ServiceGateway.Implementation.GatewayProduct;
 import com.example.jonathanspc.sctskapp.R;
 import com.squareup.picasso.Picasso;
 
@@ -52,16 +52,16 @@ public class ProductlistActivity extends AppCompatActivity {
     private ArrayList<BEProduct> brødArray = new ArrayList<>();
     private ArrayList<BEProduct> drikkevarerArray = new ArrayList<>();
 
-    private IDALC<BECategory> dc;
-    private IDALC<BEProduct> dp;
+    private IGateway<BECategory> dc;
+    private IGateway<BEProduct> dp;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_productlist);
         m_user = new BEUser();
-        dc = DALCCategory.getInstance();
-        dp = DALCProduct.getInstance();
+        dc = GatewayCategory.getInstance();
+        dp = GatewayProduct.getInstance();
 
         getFromIntent();
         setTitle("Produkter");

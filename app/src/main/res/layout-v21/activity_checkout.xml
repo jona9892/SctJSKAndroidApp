@@ -114,7 +114,7 @@
         android:background="@color/colorSCTSK"
         android:scaleY="0.87"
         android:scaleX="0.87"
-        android:layout_below="@+id/textView15"
+        android:layout_alignTop="@+id/textView15"
         android:layout_centerHorizontal="true" />
 
     <TextView

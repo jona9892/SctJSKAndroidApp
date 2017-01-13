@@ -1,26 +1,26 @@
-package com.example.jonathanspc.sctskapp.DAL.DALC.Implementation;
+package com.example.jonathanspc.sctskapp.DAL.ServiceGateway.Implementation;
 
 import com.example.jonathanspc.sctskapp.BE.BECategory;
 import com.example.jonathanspc.sctskapp.BE.BEProduct;
-import com.example.jonathanspc.sctskapp.DAL.DALC.Abstraction.IDALC;
+import com.example.jonathanspc.sctskapp.DAL.ServiceGateway.Abstraction.IGateway;
 
 import java.util.ArrayList;
 
 /**
  * Created by JonathansPC on 30-12-2016.
  */
-public class DALCProduct implements IDALC<BEProduct> {
+public class GatewayProduct implements IGateway<BEProduct> {
 
-    private static DALCProduct instance;
+    private static GatewayProduct instance;
     private ArrayList<BEProduct> products;
 
-    public static DALCProduct getInstance(){
+    public static GatewayProduct getInstance(){
         if(instance == null)
-            instance = new DALCProduct();
+            instance = new GatewayProduct();
         return instance;
     }
 
-    private DALCProduct(){
+    private GatewayProduct(){
         products = new ArrayList<BEProduct>();
         BECategory category1 = new BECategory(1,"Brød");
         BECategory category2 = new BECategory(1,"Drikkevarer");

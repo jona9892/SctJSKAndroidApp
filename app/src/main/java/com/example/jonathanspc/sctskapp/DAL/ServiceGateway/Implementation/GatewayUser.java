@@ -1,24 +1,24 @@
-package com.example.jonathanspc.sctskapp.DAL.DALC.Implementation;
+package com.example.jonathanspc.sctskapp.DAL.ServiceGateway.Implementation;
 
 import com.example.jonathanspc.sctskapp.BE.BEUser;
-import com.example.jonathanspc.sctskapp.DAL.DALC.Abstraction.IDALCUser;
+import com.example.jonathanspc.sctskapp.DAL.ServiceGateway.Abstraction.IGatewayUser;
 
 import java.util.ArrayList;
 
 /**
  * Created by JonathansPC on 29-12-2016.
  */
-public class DALCUser implements IDALCUser {
-    private static DALCUser instance;
+public class GatewayUser implements IGatewayUser {
+    private static GatewayUser instance;
     private ArrayList<BEUser> users;
 
-    public static DALCUser getInstance(){
+    public static GatewayUser getInstance(){
         if(instance == null)
-            instance = new DALCUser();
+            instance = new GatewayUser();
         return instance;
     }
 
-    private DALCUser(){
+    private GatewayUser(){
         users = new ArrayList<BEUser>();
         users.add(new BEUser(1, "Jonathan", "Gjøl", "JonathanEmail@hotmail.dk", "jona1234", "123456"));
 

@@ -43,7 +43,6 @@ public class DALCCart implements ICrud<Cart> {
         insertStmt.bindString(2, item.getProductTitle());
         insertStmt.bindDouble(3, item.getProductPrice());
         insertStmt.bindString(4, item.getProductImage());
-
         insertStmt.bindDouble(5, item.getQuantity());
 
         item.setId((int) insertStmt.executeInsert());

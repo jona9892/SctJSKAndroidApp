@@ -10,8 +10,8 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.example.jonathanspc.sctskapp.BE.BEUser;
-import com.example.jonathanspc.sctskapp.DAL.DALC.Abstraction.IDALCUser;
-import com.example.jonathanspc.sctskapp.DAL.DALC.Implementation.DALCUser;
+import com.example.jonathanspc.sctskapp.DAL.ServiceGateway.Abstraction.IGatewayUser;
+import com.example.jonathanspc.sctskapp.DAL.ServiceGateway.Implementation.GatewayUser;
 import com.example.jonathanspc.sctskapp.R;
 
 public class LoginActivity extends AppCompatActivity {
@@ -23,7 +23,7 @@ public class LoginActivity extends AppCompatActivity {
     private EditText _passwordText;
     private Button _loginButton;
     //-------------------------------------------------
-    private IDALCUser da;
+    private IGatewayUser da;
 
 
     //private UserGateway ug;
@@ -35,7 +35,7 @@ public class LoginActivity extends AppCompatActivity {
         setContentView(R.layout.activity_login);
         getSupportActionBar().hide();
 
-        da = DALCUser.getInstance();
+        da = GatewayUser.getInstance();
 
         getWidgets();
         setupButtons();

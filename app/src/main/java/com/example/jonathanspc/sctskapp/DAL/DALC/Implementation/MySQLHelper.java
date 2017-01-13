@@ -21,7 +21,8 @@ public class MySQLHelper extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
         db.execSQL("CREATE TABLE " + TABLE_Cart
-                + "(id INTEGER PRIMARY KEY, productId INTEGER, productTitle TEXT, productPrice INTEGER, productImage TEXT, quantity INTEGER)");
+                + "(id INTEGER PRIMARY KEY, productId INTEGER, " +
+                "productTitle TEXT, productPrice INTEGER, productImage TEXT, quantity INTEGER)");
     }
 
     @Override

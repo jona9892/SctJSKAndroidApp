@@ -12,13 +12,11 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.NumberPicker;
-import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -170,6 +168,18 @@ public class CartActivity extends AppCompatActivity {
         setAdapter();
     }
 
+    /**
+     * This is used to get all the widgets the arrayadapter and listview needs
+     * So that they only get called one time
+     */
+    static class ViewHolder {
+        public TextView txtItemTotal;
+        public TextView cartProdTitle;
+        public TextView cartProdPrice;
+        public ImageView imgCartProduct;
+        public NumberPicker nrpQuantity;
+        public Button btnCartDelete;
+    }
 
     /**
      * This class extends arrayAdapter which is going to be used for displaying data in listview
@@ -297,22 +307,7 @@ public class CartActivity extends AppCompatActivity {
         }
 
 
-        /**
-         * This is used to get all the widgets the arrayadapter and listview needs
-         * So that they only get called one time
-         */
-        public class ViewHolder {
-            //public TextView txtCartQunatity;
-            public TextView txtItemTotal;
-            public TextView cartProdTitle;
-            public TextView cartProdPrice;
-            public ImageView imgCartProduct;
-            public NumberPicker nrpQuantity;
-            public Button btnCartDelete;
-            //private Spinner spnQuantity;
 
-
-        }
 
     }
 

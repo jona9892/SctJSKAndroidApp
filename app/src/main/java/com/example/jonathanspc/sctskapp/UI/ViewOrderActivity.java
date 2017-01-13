@@ -19,8 +19,8 @@ import android.widget.TextView;
 
 import com.example.jonathanspc.sctskapp.BE.BEOrder;
 import com.example.jonathanspc.sctskapp.BE.BEUser;
-import com.example.jonathanspc.sctskapp.DAL.DALC.Abstraction.IDALCOrder;
-import com.example.jonathanspc.sctskapp.DAL.DALC.Implementation.DALCOrder;
+import com.example.jonathanspc.sctskapp.DAL.ServiceGateway.Abstraction.IGatewayOrder;
+import com.example.jonathanspc.sctskapp.DAL.ServiceGateway.Implementation.GatewayOrder;
 import com.example.jonathanspc.sctskapp.R;
 
 import java.util.ArrayList;
@@ -30,7 +30,7 @@ public class ViewOrderActivity extends AppCompatActivity {
     private BEUser m_user;
     ListView lstOrders;
     OrderAdapter orderAdapter;
-    IDALCOrder<BEOrder> dalcorder;
+    IGatewayOrder<BEOrder> dalcorder;
     private ArrayList<BEOrder> ordersArray;
     public static final String USERTAG = "ViewOrderUserActivity";
     public static final String ORDERTAG = "ViewOrderOrderActivity";
@@ -41,7 +41,7 @@ public class ViewOrderActivity extends AppCompatActivity {
         setContentView(R.layout.activity_view_order);
         setTitle("Mine ordrer");
 
-        dalcorder = DALCOrder.getInstance();
+        dalcorder = GatewayOrder.getInstance();
         getWidgets();
         setAdapter();
         getFromIntent();
